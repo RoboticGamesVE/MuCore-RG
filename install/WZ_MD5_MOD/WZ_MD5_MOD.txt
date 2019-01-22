@@ -1,0 +1,10 @@
+ONLY IF YOU USE MD5
+
++ Copy WZ_MD5_MOD.dll to :
+ - C:\Program Files\Microsoft SQL Server\MSSQL\Binn
+ - C:\Program Files\Microsoft SQL Server\xxxxxxxxxxxxx\Tools\Binn
+
++ Run SQL QUERY: WZ_MD5_MOD.sql
+
+
+##################### Dao Van Trong - Trong.CF #######################

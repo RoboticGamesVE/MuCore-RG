@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<nav_master>
+<nav_cat title="Cupon Modulo" group="150">
+<nav_option link="index.php?get=cupon_credits_manager" group="150">Cupon for Credits Manager</nav_option>
+</nav_cat>
+</nav_master>

@@ -1,0 +1,1 @@
+alter table Character add SCFMasterLevel int not null default 1

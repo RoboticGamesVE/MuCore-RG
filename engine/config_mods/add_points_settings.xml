@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<levelup_settings>
+<active>1</active>
+<str_limit>65000</str_limit>
+<agi_limit>65000</agi_limit>
+<vit_limit>65000</vit_limit>
+<eng_limit>65000</eng_limit>
+<cmd_limit>65000</cmd_limit>
+</levelup_settings>

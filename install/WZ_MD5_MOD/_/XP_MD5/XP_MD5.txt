@@ -1,0 +1,8 @@
+ONLY IF YOU USE MD5
+
++ Copy xp_md5.dll ---to-> C:\Program Files\Microsoft SQL Server\MSSQL\Binn\
+
++ Run SQL QUERY: XP_MD5.sql
+
+
+##################### Dao Van Trong - Trong.CF #######################

@@ -1,0 +1,13 @@
+<?php
+//$filename = dirname(__FILE__) . "/install/.htaccess";
+//$filename = str_replace(" ", "", $filename);
+$filename = 'install/.htaccess';
+if (file_exists($filename)) {
+		rename("index.php", "index.lock"); rename("index.bmn", "index.php"); 
+		header("Refresh: 0");
+	} else {
+		echo "<center><b>Please complete the installation process!</b></center>";
+		echo('<meta http-equiv="Location" content="install">');
+		echo("<script>location.href = 'install';</script>");
+ }
+?> 

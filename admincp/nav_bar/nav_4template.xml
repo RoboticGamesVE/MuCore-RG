@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<nav_master>
+<nav_cat title="Template Modules" group="30">
+<nav_option link="index.php?get=template_settings" group="30">Template Settings</nav_option>
+<nav_option link="index.php?get=topbar_manager" group="30">Topbar Manager</nav_option>
+<nav_option link="index.php?get=barnotice_manager" group="30">BarNotice Manager</nav_option>
+<nav_option link="index.php?get=socialbar_manager" group="30">SocialBar Manager</nav_option>
+<nav_option link="index.php?get=slider_manager" group="30">Slider Manager</nav_option>
+<nav_option link="index.php?get=footerserver_manager" group="30">FooterServer Manager</nav_option>
+<nav_option link="index.php?get=footerrg_manager" group="30">FooterRG Manager</nav_option>
+<nav_option link="index.php?get=license_manager" group="30">License Manager</nav_option>
+</nav_cat>
+</nav_master>

@@ -1,0 +1,1 @@
+alter table Character add SCFMasterPoints int not null default 0

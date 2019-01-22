@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<nav_master>
+<nav_cat title="Premium Modules" group="20">
+<nav_option link="index.php?get=vote_credits_manager" group="20">Vote for Credits Manager</nav_option>
+<!--
+<nav_option link="index.php?get=events_settings" group="50">Events Settings</nav_option>
+<nav_option link="index.php?get=events_manager" group="50">Events Management</nav_option>
+<nav_option link="index.php?get=staff_manager" group="50">Manage Staff List</nav_option>
+<nav_option link="index.php?get=table_settings" group="50">Tables Settings</nav_option>
+<nav_option link="index.php?get=statistics_settings" group="50">Statistics Settings</nav_option>
+<nav_option link="index.php?get=slider_settings" group="50">Slider Settings</nav_option>
+-->
+</nav_cat>
+</nav_master>

@@ -1,0 +1,1 @@
+alter table MEMB_STAT add memb_guid int identity

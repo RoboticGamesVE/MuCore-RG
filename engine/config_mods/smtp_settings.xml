@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<smtp>
+<smtp_server>smtp.server.com</smtp_server>
+<smtp_username>uname@server.com</smtp_username>
+<smtp_password>SMTP_Pass</smtp_password>
+<smtp_port>465</smtp_port>
+<smtp_connection>ssl</smtp_connection>
+</smtp>

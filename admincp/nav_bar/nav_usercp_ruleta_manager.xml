@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<nav_master>
+<nav_cat title="Ruleta Management [User]" group="90">
+<nav_option link="index.php?get=usercp_ruleta_manager" group="90">Ruleta Premios</nav_option></nav_cat>
+</nav_master>

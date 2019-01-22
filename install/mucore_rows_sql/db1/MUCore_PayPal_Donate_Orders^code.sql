@@ -1,0 +1,1 @@
+alter table MUCore_PayPal_Donate_Orders add code varchar(255) null

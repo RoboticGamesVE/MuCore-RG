@@ -1,0 +1,211 @@
+<?php
+/**
+ * 2017-2018 RoboticGames
+ * NOTICE OF LICENSE
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * https://opensource.org/licenses/OSL-3.0
+ *
+ * DISCLAIMER
+ * Do not edit or add to this file if you wish to upgrade RoboticGames to newer
+ * versions in the future. If you wish to customize RoboticGames for your
+ * needs please refer to http://roboticgames.web.ve for more information.
+ *
+ * @author    RoboticGames FP <roboticgames.ve@gmail.com>
+ * @copyright 2017-2018 RoboticGames FP
+ * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
+ * @Credits   Isumeru & MaryJo & Dao Van Trong - Trong.CF                      ¦
+*/
+if (isset($_POST['settings'])) {
+    $save_1 = new_config_xml('../engine/config_mods/register_settings', 'pers_id_active', '' . safe_input($_POST['pers_id_active'], '') . '');
+    $save_2 = new_config_xml('../engine/config_mods/register_settings', 'pers_id_length', '' . safe_input($_POST['pers_id_length'], '') . '');
+    $save_3 = new_config_xml('../engine/config_mods/register_settings', 'pers_id', '' . safe_input($_POST['pers_id'], '') . '');
+    $save_4 = new_config_xml('../engine/config_mods/register_settings', 'method', '' . safe_input($_POST['method'], '') . '');
+    echo notice_message_admin('Settings successfully saved', 1, 0, 'index.php?get=register_settings');
+    
+} else {
+    if (isset($_POST['module_active'])) {
+        $save_status = new_config_xml('../engine/config_mods/register_settings', 'active', safe_input($_POST['module_active'], ''));
+    }
+    $get_config = simplexml_load_file('../engine/config_mods/register_settings.xml');
+    echo '
+<section class="content" style="width: 95%;margin: 0 auto 0 auto;">
+	<div class="container-fluid">
+		<!-- Body Copy -->
+		<div class="row clearfix">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="card">
+					<div class="header">
+						<h2 style="text-align: center;">
+							Register Settings
+						</h2>
+					</div>
+					<div class="body">
+					<form action="" method="post" id="form1">';
+					 	if ($get_config->active == '1') {
+        					echo '<p class="lead" align="left" style="background: #0C0;padding: 5px 0px 5px 5px">Register is active.
+								<button type="submit" form="form1" class="btn btn-primary m-t-15 waves-effect" style="float: right;margin-right: 20px;margin-top: 0;">Turn Register Off</button></p>
+								<input type="hidden" name="module_active" value="0">';
+    					} elseif ($get_config->active == '0') {
+        					echo '<p class="lead" align="left" style="background: #C00;padding: 5px 0px 5px 5px">Register is inactive.
+								<button type="submit" form="form1" class="btn btn-primary m-t-15 waves-effect" style="float: right;margin-right: 20px;margin-top: 0;">Turn Register On</button></p>
+								<input type="hidden" name="module_active" value="1">';
+    					}
+						echo '      
+					</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- #END# Body Copy -->
+	</div>
+</section>
+
+
+
+
+
+
+
+<form action="" name="form_edit" method="post" id="form2">
+<section class="content" style="width: 95%;margin: 0 auto 0 auto;">
+	<div class="container-fluid">
+		<!-- Body Copy -->
+		<div class="row clearfix">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="card" style="margin-bottom: 0px;">
+					<div class="header">
+						<h2 style="text-align: center;">
+							Register Settings
+						</h2>
+					</div>
+					<div class="body">
+						<p class="lead" align="left">
+                        	Verify Email address in Registration
+                    	</p>
+                        
+                        <div class="row clearfix">
+                        	<div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label" style="width: 60%;text-align: left;">
+                            	If you set to \'Yes\' new user will not be allowed top play until they visit a link that is sent to them in an email when they register.<br><br>
+If a user\'s account is not activated by the user visiting the link, it will remain in the \'<a href="index.php?get=users_activate">Users Awaiting Activation</a>\' group.<br><br>Note: <b>Verify Email address in Registration</b> require SMTP Server, <a href="index.php?get=smtp_settings">SMTP Settings</a>
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7" style="width: 30%;margin-bottom: 1px;">
+                            	<div class="form-group" style="margin-bottom: 1px;">
+                                	<div class="form-line">';
+										switch ($get_config->method) {
+        									case '1':
+            									echo '
+													<div class="demo-radio-button">
+														<input type="radio" class="with-gap" id="radio_1" name="method" value="2"/>
+           												<label for="radio_1" style="min-width: 70px;">Yes</label>	
+														<input type="radio" class="with-gap" id="radio_2" name="method" checked="checked" value="1"/>
+            											<label for="radio_2" style="min-width: 70px;">No</label>
+    												</div>';
+											break;
+        									case '2':
+            									echo '
+													<div class="demo-radio-button">
+	   												<input type="radio" class="with-gap" id="radio_1" name="method" value="2" checked="checked"/>
+													<label for="radio_1" style="min-width: 70px;">Yes</label>
+       												<input type="radio" class="with-gap" id="radio_2" name="method" value="1"/>
+                                					<label for="radio_2" style="min-width: 70px;">No</label>
+                           							</div>';
+											break;
+										}
+									echo '	
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						
+						<p class="lead" align="left">
+                        	Personal ID
+                    	</p>
+                        
+                        <div class="row clearfix">
+                        	<div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label" style="width: 60%;text-align: left;">
+                            	When \'Yes\' user can put his own custom Personal ID, set the minimum digits (default 12)<br>
+								When \'No\' you must set the Personal ID (default 111111111111).
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7" style="width: 30%;margin-bottom: 1px;">
+                            	<div class="form-group" style="margin-bottom: 1px;">
+                                	<div class="form-line">';
+										switch ($get_config->pers_id_active) {
+        									case '0':
+            									echo '
+													<div class="demo-radio-button">
+														<input type="radio" class="with-gap" id="radio_3" name="pers_id_active" value="1"/>
+           												<label for="radio_3" style="min-width: 70px;">Yes</label>	
+														<input type="radio" class="with-gap" id="radio_4" name="pers_id_active" value="0" checked="checked"/>
+            											<label for="radio_4" style="min-width: 70px;">No</label>
+    												</div>';
+											break;
+        									case '1':
+            									echo '
+													<div class="demo-radio-button">
+	   												<input type="radio" class="with-gap" id="radio_3" name="pers_id_active" value="1" checked="checked"/>
+													<label for="radio_3" style="min-width: 70px;">Yes</label>
+       												<input type="radio" class="with-gap" id="radio_4" name="pers_id_active" value="0"/>
+                                					<label for="radio_4" style="min-width: 70px;">No</label>
+                           							</div>';
+											break;
+										}
+									echo '	
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						
+						<p class="lead" align="left">
+                        	Personal ID Length
+                    	</p>
+                        
+                        <div class="row clearfix">
+                        	<div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label" style="width: 60%;text-align: left;">
+                            	Set the length required for Personal ID, default is 12 digits.
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7" style="width: 30%;margin-bottom: 1px;">
+                            	<div class="form-group" style="margin-bottom: 1px;">
+                                	<div class="form-line">
+                                    	<input type="text" class="form-control" name="pers_id_length" value="' . $get_config->pers_id_length . '">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						
+						
+						<p class="lead" align="left">
+                        	Pre-set Personal ID
+                    	</p>
+                        
+                        <div class="row clearfix">
+                        	<div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label" style="width: 60%;text-align: left;">
+                            	Set the custom Personal ID, default is 111111111111.
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7" style="width: 30%;margin-bottom: 1px;">
+                            	<div class="form-group" style="margin-bottom: 1px;">
+                                	<div class="form-line">
+                                    	<input type="text" class="form-control" maxlength="'.$get_config->pers_id_length.'" name="pers_id" value="' . $get_config->pers_id . '">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						
+						<p style="border-top: 1px solid rgba(204, 204, 204, 0.35);">
+                            	<div class="row clearfix">
+                            		
+                                	<div class="col-lg-10 col-md-10 col-sm-8 col-xs-7" style="width: 100%;margin-bottom: 0px;">
+                                        <button type="submit" form="form2" class="btn btn-primary m-t-15 waves-effect" style="float: right;margin-right: 100px;margin-top: 5px;">SAVE</button>
+                                	</div>
+                             	</div>
+                            </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- #END# Body Copy -->
+	</div>
+</section>
+<input type="hidden" name="settings">
+</form>';    
+}
+?> 

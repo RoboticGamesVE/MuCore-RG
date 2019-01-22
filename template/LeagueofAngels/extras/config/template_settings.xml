@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<settings>
+<topbar>1</topbar>
+<barnotice>1</barnotice>
+<socialbar>1</socialbar>
+<tablink1>1</tablink1>
+<tablink2>2</tablink2>
+<tablink3>3</tablink3>
+<tabtouch1>1</tabtouch1>
+<tabtouch2>2</tabtouch2>
+<tabtouch3>3</tabtouch3>
+<footerchat>1</footerchat>
+<footerserver>1</footerserver>
+<footerrg>1</footerrg>
+<url1>index.php?page_id=downloads</url1>
+<url2></url2>
+<url3></url3>
+<url4>index.php?page_id=contact</url4>
+<url5>forum</url5>
+<url6>https://twitter.com/roboticgamesve</url6>
+<video>https://www.youtube.com/embed/c1bmQLxufVA</video>
+</settings>

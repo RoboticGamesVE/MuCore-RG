@@ -1,0 +1,1 @@
+alter table MUCore_PayPal_Donate_Transactions add credits_issued int null

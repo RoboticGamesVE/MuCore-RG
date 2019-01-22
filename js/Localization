@@ -1,0 +1,93 @@
+
+gp.Culture = {
+    Language : "en",
+    RegionTwoLetterISO : "US",
+    RegionFullName : "United States"
+    
+}
+
+
+gp.Localization = {
+    A_A017 : "Service coming soon.",
+    FE_A003 : "Global Server Time",
+    FE_A029 : "Games",
+    FE_A106 : "Create Nickname",
+
+    FE_A127 : "LIVE GAMES",
+    FE_A128 : "UPCOMING GAMES",
+    FE_A129 : "ABOUT WEBZEN",
+    FE_A132 : "POLICIES",
+    FE_A136 : "CONTACT US",
+
+    FE_A192 : "Your Local Time",
+    
+    
+    FE_A031 : "Notices",
+    FE_A032 : "Events",
+    FE_A033 : "Press Releases",
+    FE_A036 : "Buy W Coins",
+    FE_A037 : "Redeem Code",
+    FE_A038 : "Get Free W Coins",
+    FE_A039 : "Gift W Coins",
+        
+    FE_A030 : "News",
+    FE_A034 : "Forums",
+    FE_A035 : "W Coins",
+
+    FE_A040 : "Downloads",
+    FE_A046 : "Support",
+    
+    FE_A041 : "My Account",
+    FE_A047 : "FAQ",
+    FE_A048 : "Submit a Ticket",
+    FE_A049 : "Security Card Help",
+
+    FE_A050 : "W Coin Help",
+    FE_A051 : "Starter Guide",
+    FE_A052 : "My Profile",
+    FE_A053 : "W Coin History",
+    FE_A056 : "Security Cards",
+
+    FE_A061 : "Terminate Account",
+    
+    FE_A129 : "ABOUT WEBZEN",
+    
+    FE_A130 : "Company Information",
+    FE_A131 : "Webzen Korea",
+    FE_A133 : "Privacy Policy",
+    FE_A134 : "Terms of Service",
+    FE_A135 : "Policies",
+    FE_A137 : "Media",
+    FE_A138 : "Licensing &amp; Business Co-op",
+    FE_A139 : "Co-Marketing",
+    FE_A200 : "My Tickets",
+
+    FE_D031 : "Download Drivers",
+
+    FE_D042 : "Windows 95 users are required to install Microsoft Windows Sockets 2 (Winsock 2.0).&lt;br&gt;This installation may require a system reboot.",
+    FE_D042 : "Download Clients",
+    		
+    FE_M004 : "Log In",
+    FE_M005 : "Log Out",
+    FE_M006 : "Sign Up",
+    FE_M008 : "My Account",
+    FE_M015 : "Connect with",
+    FE_M049 : "My Profile",
+
+    FE_N011 : "More",
+    FE_N012 : "Less",
+
+
+    A_G001 : "Access denied. User account suspended.",
+    A_G002 : "Install the game client before starting the game. Please click OK to go to the game client download page.",    
+    A_G004 : "Temporarily experiencing a network communication error.",
+    A_G005 : "The game is currently running.",    
+    A_G007 : "Your authentication data is invalid.",    
+    A_G009 : "The game is already running under the current account.",
+    A_G010 : "Thank you for choosing WEBZEN games! The game you chose is not currently available due to regional restrictions. Please use the service provided by your country&#39;s official game site.",
+    A_G011 : "You must accept Webzen’s Terms of Services and Privacy Policy to continue.",
+    A_G012 : "This website does not support your browser. Please try again using a different browser.",
+    A_G013 : "Web Starter was not installed correctly. Please remove and reinstall Web Starter.",
+    A_G014 : "Game failed to launch. Please try again after confirming the User Account Control (UAC) window."
+
+}
